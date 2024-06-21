@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem; ">
+<app-add-task (addKro)="JaldiAddKro($event)"></app-add-task>
+@for (taskitem of tasks; track taskitem.id) {
+<app-task [taskitme]="taskitem" (hatao)="JaldiHatao($event)" ></app-task>
+}
+</div>
+
+<app-pipes></app-pipes>

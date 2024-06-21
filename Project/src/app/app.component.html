@@ -1,0 +1,22 @@
+FirstName:<input type="text"  [(ngModel)]="Fname"/><br>
+LastName:<input type="text" [(ngModel)]="Lname">
+<button (click)="Add()" class="btn btn-success">Add</button>
+  <button (click)="Sort()" class="bi bi-sort-up"></button>
+<div class="container">
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Action</th>
+    </tr>
+    <tbody>
+      @for(name of names; track $index){
+      <tr>
+       <td>{{name.FirstName}}</td>
+       <td>{{name.LastName}}</td>
+       <td><button class="bi bi-trash" (click)="remove($index)" ></button></td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>
